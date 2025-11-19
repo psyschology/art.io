@@ -1824,6 +1824,13 @@
                     document.getElementById('page-home').classList.add('active');
                 }
 
+                // *** ADD THIS BLOCK HERE ***
+                // If we are navigating to the cart, re-render it to show new items
+                if (pageId === 'cart') {
+                    renderCart();
+                }
+                // ***************************
+
                 // Update active nav links
                 navLinks.forEach(link => {
                     link.classList.toggle('active', link.dataset.page === pageId);
